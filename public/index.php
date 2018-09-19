@@ -33,6 +33,17 @@ $factory->set(
         return $url;
     }
 );
+$factory->set(
+    'db',
+    function () {
+        return new \Phalcon\Db\Adapter\Pdo\Postgresql([
+           'host' => '127.0.0.1',
+           'username' => 'phalcon-lab',
+           'password' => 'phalcon-lab',
+           'dbname' => 'phalcon-lab',
+        ]);
+    }
+);
 
 $app = new \Phalcon\Mvc\Application($factory);
 $response = $app->handle();
