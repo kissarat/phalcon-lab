@@ -1,0 +1,10 @@
+*~
+.DS_Store
+.hg*
+.idea/
+.sass-cache/
+node_modules/
+npm-debug.log
+public/.well-known/
+Thumbs.db
+vendor

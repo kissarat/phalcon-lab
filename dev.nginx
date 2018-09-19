@@ -1,0 +1,22 @@
+server {
+    server_name phalcon.administer.tech;
+    listen 80;
+    root /Users/kissarat/Public/github.com/kissarat/phalcon-lab/public;
+    index index.html index.php;
+
+    access_log /usr/local/var/log/nginx/phalcon.log main;
+    error_log /usr/local/var/log/nginx/phalcon.error.log warn;
+
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+    location ~ \.php$ {
+        include fastcgi.conf;
+        fastcgi_intercept_errors on;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        #fastcgi_pass unix:/var/run/php.sock;
+        fastcgi_pass 127.0.0.1:9000;
+        fastcgi_read_timeout 300;
+    }
+}

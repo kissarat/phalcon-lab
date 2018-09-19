@@ -1,0 +1,13 @@
+{
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.2",
+    "phalcon/cphalcon": "dev-master"
+  },
+  "suggest": {
+  },
+  "require-dev": {
+  },
+  "extra": {
+  }
+}
