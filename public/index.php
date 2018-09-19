@@ -37,6 +37,3 @@ $factory->set(
 $app = new \Phalcon\Mvc\Application($factory);
 $response = $app->handle();
 $response->send();
-
-//Phalcon\Application\Bo::init([])->runApplicationOn($_SERVER);
-//phpinfo();
